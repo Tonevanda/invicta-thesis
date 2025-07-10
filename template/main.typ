@@ -37,7 +37,6 @@
   // Configuration options
   stage: "final", // This is a final version
   language: "en",
-  degree-type: "meic",
   has-unsdg: false, // Include UN SDG section
   has-quote: true,
   bib-style: "ieee",

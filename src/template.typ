@@ -4,38 +4,6 @@
 #import "covers.typ": make-cover, make-committee-page
 #import "toc.typ": make-toc
 
-// Helper function to get degree-specific defaults
-#let get-degree-defaults(degree-type) = {
-  let defaults = (
-    "meec": (
-      department: "Department of Electrical and Computer Engineering",
-      degree-full: "Master in Electrical and Computer Engineering"
-    ),
-    "meic": (
-      department: "Department of Informatics Engineering", 
-      degree-full: "Master in Informatics and Computing Engineering"
-    ),
-    "mem": (
-      department: "Department of Mechanical Engineering",
-      degree-full: "Master in Mechanical Engineering"
-    ),
-    "mesw": (
-      department: "Department of Informatics Engineering",
-      degree-full: "Master in Software Engineering"
-    ),
-    "mci": (
-      department: "Department of Industrial Engineering and Management",
-      degree-full: "Master in Industrial Engineering and Management"
-    ),
-    "generic": (
-      department: "Faculty of Engineering",
-      degree-full: "Master's Degree"
-    )
-  )
-  
-  return defaults.at(degree-type, default: defaults.generic)
-}
-
 // Main template function
 #let feup-thesis(
   // Document metadata
@@ -61,7 +29,6 @@
   // Configuration options
   stage: "preparation", // "preparation", "juri", "final"
   language: "en", // "en", "pt"
-  degree-type: "meic", // "meec", "meic", "mem", "mesw", "mci", "generic"
   has-unsdg: false, // true if your thesis has united nations sustainable development goals
   has-quote: true,  // true if your thesis has a quote
   bib-style: "ieee", // bibliography style: e.g, "apa", "chicago-notes", "mla"
@@ -69,9 +36,6 @@
   // Document body
   body
 ) = {
-  
-  // Get degree-specific defaults
-  let degree-defaults = get-degree-defaults(degree-type)
   
   // Create configuration object
   let config = (
@@ -88,12 +52,9 @@
     signature: signature,
     stage: stage,
     language: language,
-    degree-type: degree-type,
     has-unsdg: has-unsdg,
     has-quote: has-quote,
     bib-style: bib-style,
-    department: degree-defaults.department,
-    degree-full: degree-defaults.degree-full,
   )
 
   // Document setup

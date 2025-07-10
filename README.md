@@ -92,7 +92,6 @@ The template accepts the following parameters:
 #### Configuration
 - `stage`: Document stage ("preparation", "juri", "final")
 - `language`: Document language ("en", "pt")
-- `degree-type`: Degree type ("meec", "meic", "mem", "mesw", "mci", "generic")
 - `has-unsdg`: Include UN SDG section
 - `has-quote`: Include quote page
 - `bib-style`: Bibliography style ("ieee", "apa", "chicago-notes", "mla")
