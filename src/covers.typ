@@ -27,11 +27,9 @@
 
   v(6cm)
   
-  // Logo
-  if config.logo != none {
-    image(config.logo, width: 8cm)
-    v(1cm)
-  }
+  
+  image("uporto-feup.png", width: 8cm)
+  v(1cm)
   
   if config.additional-front-text != none {
     v(0.5em)

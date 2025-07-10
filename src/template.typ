@@ -50,7 +50,6 @@
   copyright-notice: none,
   
   // Visual elements
-  logo: none,
   additional-front-text: none,
   
   // Committee information
@@ -83,7 +82,6 @@
     second-supervisor: second-supervisor,
     thesis-date: thesis-date,
     copyright-notice: copyright-notice,
-    logo: logo,
     additional-front-text: additional-front-text,
     committee-text: committee-text,
     committee-members: committee-members,

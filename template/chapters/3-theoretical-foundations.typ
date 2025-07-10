@@ -1,7 +1,7 @@
 // Use this import when the package is published to Typst Universe
 // // #import "@preview/feup-thesis:1.0.0": *
 
-#import "../../src/lib.typ" as feup
+#import "@local/feup-thesis:1.0.0" as feup
 
 #heading(level: 1)[Theoretical Foundations]
 

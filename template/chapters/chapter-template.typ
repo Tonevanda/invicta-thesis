@@ -5,7 +5,7 @@
 //#import "@preview/feup-thesis:1.0.0" as feup
 
 // For local development, use:
-#import "../../src/lib.typ" as feup
+#import "@local/feup-thesis:1.0.0" as feup
 
 // Example chapter content
 #heading(level: 1)[Your Chapter Title]

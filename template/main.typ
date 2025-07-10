@@ -6,9 +6,9 @@
 // // #import "@preview/feup-thesis:1.0.0": *
 
 // For local development, use:
-#import "../src/lib.typ": *
+#import "@local/feup-thesis:1.0.0" as feup
 
-#show: template.with(
+#show: feup.template.with(
   // Document metadata
   title: "Example FEUP Thesis",
   author: "John Doe",
@@ -21,7 +21,6 @@
   copyright-notice: "John Doe, 2025",
   
   // Visual elements
-  logo: "figures/uporto-feup.png", // Set to "figures/uporto-feup.png" if you have the logo file
   additional-front-text: none,
   
   // Committee information (example for final version), use none otherwise
@@ -67,19 +66,19 @@
 #include "prologue/acknowns.typ"
 
 // Quote
-#epigraph(
+#feup.epigraph(
   "The best way to predict the future is to invent it.",
   "Alan Kay"
 )
 
-#dedication(
+#feup.dedication(
   text("To my family, whose unwavering support has been the foundation of my academic journey."),
 )
 
 #pagebreak()
 
 // Table of Contents
-#table-of-contents()
+#feup.table-of-contents()
 
 // Abbreviations
 #heading(level: 1, numbering: none)[List of Abbreviations]
