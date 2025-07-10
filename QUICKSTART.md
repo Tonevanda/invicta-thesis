@@ -149,40 +149,13 @@ Add entries to `refs.bib`:
 
 Cite with `@key` or `#cite("key")`
 
-## File Organization
-
-```
-your-thesis/
-├── main.typ              # Main document
-├── refs.bib              # Bibliography
-├── figures/              # Images and diagrams
-│   ├── uporto-feup.png   # FEUP logo
-│   └── your-figures...
-└── prologue/             # Front matter
-    ├── abstract.typ
-    ├── resumo.typ
-    ├── acknowns.typ
-    ├── quote.typ
-    └── unsdg.typ
-```
-
-## Tips
-
-1. **Use version control** (git) for your thesis
-2. **Compile frequently** to catch errors early
-3. **Keep figures in a separate folder** for organization
-4. **Use meaningful labels** for cross-references
-5. **Backup your work** regularly
-
 ## Troubleshooting
 
 ### Common Issues
 
-**Logo not found**: Make sure `figures/uporto-feup.png` exists or set `logo: none`
-
 **Bibliography not showing**: Check that `refs.bib` is in the correct location and has valid entries
 
-**Chapters not formatting correctly**: Ensure you're using `= Chapter Title` for level 1 headings
+**Chapters not formatting correctly**: Ensure you're using `#heading(level: 1)[name]` for level 1 headings
 
 ### Getting Help
 
@@ -201,7 +174,6 @@ your-thesis/
   degree: "Master in Electrical and Computer Engineering",
   supervisor: "Prof. João Santos",
   copyright-notice: "Maria Silva, 2025",
-  logo: "figures/uporto-feup.png",
   stage: "final",
   language: "en",
   bib-style: "ieee",
@@ -210,4 +182,4 @@ your-thesis/
 // Your content starts here...
 ```
 
-Happy writing! 🎓
+Boa Sorte! 🎓
