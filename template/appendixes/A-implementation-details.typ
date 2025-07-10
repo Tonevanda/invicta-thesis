@@ -1,4 +1,4 @@
-#import "../../src/lib.typ" as feup
+#import "@local/feup-thesis:1.0.0" as feup
 
 #heading[Appendix A – Implementation Details]
 
