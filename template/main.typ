@@ -44,7 +44,7 @@
 )
 
 // Resumo
-#set page(numbering: "i")
+#set page(numbering: "i", number-align: bottom + center)
 #counter(page).update(1)
 #heading(level: 1, numbering: none)[Resumo]
 
@@ -102,7 +102,7 @@
 #pagebreak()
 
 // Start main body with arabic numbering
-#set page(numbering: "1")
+#set page(numbering: "1", number-align: top + right)
 #counter(page).update(1)
 
 // CHAPTERS - Include your chapter files here

@@ -113,7 +113,7 @@
       right: 2.5cm,
     ),
     numbering: "1",
-    number-align: center,
+    number-align: top + right,
   )
 
   // Text formatting
