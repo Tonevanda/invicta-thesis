@@ -105,6 +105,9 @@
 #set page(numbering: "1", number-align: top + right)
 #counter(page).update(1)
 
+// Mark the start of main content for table of contents
+<main-content>
+
 // CHAPTERS - Include your chapter files here
 // Follow the chapter-template.typ structure
 // 

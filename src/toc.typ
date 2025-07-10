@@ -7,20 +7,21 @@
     title: "Table of Contents",
     depth: 3,
     indent: auto,
+    target: selector(heading).after(<main-content>),
   )
   
   pagebreak()
   
   outline(
     title: "List of Figures",
-    target: figure.where(kind: image),
+    target: selector(figure.where(kind: image)).after(<main-content>),
   )
   
   pagebreak()
   
   outline(
     title: "List of Tables",
-    target: figure.where(kind: table)
+    target: selector(figure.where(kind: table)).after(<main-content>),
   )
   
   pagebreak()
