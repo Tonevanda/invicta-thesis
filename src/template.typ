@@ -135,9 +135,19 @@
     #v(2em)
     #if it.numbering != none {
       let chapter_num = counter(heading).get().first()
-      block(
-        text(size: 20pt, weight: "bold", [Chapter #chapter_num])
-      )
+      
+      // Check if this is an appendix by looking at the numbering pattern
+      if it.numbering == "A.1" {
+        // Convert number to letter (1=A, 2=B, etc.)
+        let appendix_letter = str.from-unicode(65 + chapter_num - 1) // 65 is ASCII for 'A'
+        block(
+          text(size: 20pt, weight: "bold", [Appendix #appendix_letter])
+        )
+      } else {
+        block(
+          text(size: 20pt, weight: "bold", [Chapter #chapter_num])
+        )
+      }
     }
     #v(1em)
     #block(

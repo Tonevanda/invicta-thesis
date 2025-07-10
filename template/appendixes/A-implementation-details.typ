@@ -1,6 +1,6 @@
 #import "@local/feup-thesis:1.0.0" as feup
 
-#heading[Appendix A – Implementation Details]
+#heading[Implementation Details]
 
 This appendix provides additional implementation details and code snippets.
 

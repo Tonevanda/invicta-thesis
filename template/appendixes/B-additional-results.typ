@@ -1,6 +1,6 @@
 #import "@local/feup-thesis:1.0.0" as feup
 
-#heading[Appendix B – Additional Results]
+#heading[Additional Results]  
 
 This appendix contains supplementary experimental results and analysis.
 
