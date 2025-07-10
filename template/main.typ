@@ -43,6 +43,11 @@
   bib-style: "ieee",
 )
 
+// Optional
+#feup.dedication(
+  text("To my family, whose unwavering support has been the foundation of my academic journey.", hyphenate: false),
+)
+
 // Resumo
 #set page(numbering: "i", number-align: bottom + center)
 #counter(page).update(1)
@@ -71,35 +76,23 @@
   "Alan Kay"
 )
 
-#feup.dedication(
-  text("To my family, whose unwavering support has been the foundation of my academic journey."),
-)
-
-#pagebreak()
-
 // Table of Contents
 #feup.table-of-contents()
 
-// Abbreviations
-#heading(level: 1, numbering: none)[List of Abbreviations]
-
-#table(
-  columns: (1fr, 3fr),
-  stroke: none,
-  fill: none,
-  [AI], [Artificial Intelligence],
-  [API], [Application Programming Interface],
-  [CNN], [Convolutional Neural Network],
-  [CPU], [Central Processing Unit],
-  [GPU], [Graphics Processing Unit],
-  [ML], [Machine Learning],
-  [NLP], [Natural Language Processing],
-  [RNN], [Recurrent Neural Network],
-  [SGD], [Stochastic Gradient Descent],
-  [UI], [User Interface],
+// List of Acronyms
+#feup.acronym-list((
+    ("AI", "Artificial Intelligence"),
+    ("API", "Application Programming Interface"),
+    ("CNN", "Convolutional Neural Network"),
+    ("CPU", "Central Processing Unit"),
+    ("GPU", "Graphics Processing Unit"),
+    ("ML", "Machine Learning"),
+    ("NLP", "Natural Language Processing"),
+    ("RNN", "Recurrent Neural Network"),
+    ("SGD", "Stochastic Gradient Descent"),
+    ("UI", "User Interface"),
+  ),
 )
-
-#pagebreak()
 
 // Start main body with arabic numbering
 #set page(numbering: "1", number-align: top + right)

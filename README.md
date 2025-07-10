@@ -15,6 +15,7 @@ This template provides a clean and professional layout that follows FEUP's thesi
 - **Table of contents, figures, and tables** generation
 - **UN Sustainable Development Goals** section (optional)
 - **Quote page** support (optional)
+- **Dedication page** support (optional)
 
 ## Prerequisites
 
@@ -24,66 +25,46 @@ For offline compilation, ensure you have Typst installed on your system.
 
 ## Usage
 
-There are two ways to use this template:
-
-### Published Package (Recommended)
-
-Once published on Typst Universe, import the template like this:
-
+### Basic Usage
 ```typst
 #import "@preview/feup-thesis:1.0.0": *
-```
 
-### Local Development
-
-For local development or if you want to modify the template:
-
-1. Clone this repository
-2. Run the development setup script:
-   ```bash
-   ./setup-dev.sh
-   ```
-3. Use local imports in your documents:
-   ```typst
-   #import "../src/lib.typ": *
-   ```
-4. Compile with the root flag:
-   ```bash
-   typst compile --root . template/main.typ
-   ```
-
-### Quick Start
-
-1. Import the template in your main document:
-
-```typst
-#import "@preview/feup-thesis:1.0.0": *typst
-#import "@preview/feup-thesis:1.0.0": *
-```
-
-2. Apply the template with your configuration:
-
-```typst
 #show: template.with(
   title: "Your Thesis Title",
-  author: "Your Full Name",
+  author: "Your Name",
+  supervisor: "Prof. Your Supervisor",
+)
+
+= Introduction
+Your content here...
+```
+
+### Advanced Configuration
+```typst
+#show: template.with(
+  title: "Advanced Machine Learning for Computer Vision",
+  author: "Maria Silva",
   degree: "Master in Electrical and Computer Engineering",
-  supervisor: "Prof. Your Supervisor Name",
-  // ... other configuration options
+  supervisor: "Prof. João Santos",
+  committee-text: "Approved in oral examination by the committee:",
+  committee-members: (
+    (role: "President", name: "Prof. Ana Costa"),
+    (role: "Referee", name: "Prof. Carlos Lima"),
+  ),
+  stage: "final",
+  language: "en",
+  bib-style: "ieee",
 )
 ```
 
-3. Write your content using standard Typst markup.
+## 🛠 Available Utilities
 
-### Local Development
-
-For local development and testing, you can use:
-
-```typst
-#import "src/lib.typ": *
-```
-
-See `example.typ` for a complete working example with all features demonstrated.
+- `#epigraph(quote, author)` - Quote with attribution
+- `#code-block(code, caption)` - Syntax-highlighted code blocks
+- `#algorithm(title, content)` - Algorithm pseudocode
+- `#dedication(content)` - Dedication page
+- `#acronym-list(acronyms)` - List of acronyms
+- `#notation-list(symbols)` - Mathematical notation
 
 ### Configuration Options
 
@@ -101,7 +82,6 @@ The template accepts the following parameters:
 - `copyright-notice`: Copyright notice text
 
 #### Visual Elements
-- `logo`: Path to university logo
 - `additional-front-text`: Additional text for cover page
 
 #### Committee Information
@@ -146,14 +126,15 @@ The template automatically generates:
 
 1. **Cover page** with university branding
 2. **Committee approval page** (if configured)
-3. **Abstract** and **Resumo** sections
-4. **Acknowledgments** section
-5. **Quote page** (if enabled)
-6. **Table of Contents, List of Figures, List of Tables**
-7. **Abbreviations** section
-8. **Main content** with proper chapter formatting
-9. **Bibliography** section
-10. **Appendices** with appropriate numbering
+3. **Dedication** (optional)
+4. **Abstract** and **Resumo** sections
+5. **Acknowledgments** section
+6. **Quote page** (if enabled)
+7. **Table of Contents, List of Figures, List of Tables**
+8. **Acronyms** section
+9. **Main content** with proper chapter formatting
+10. **Bibliography** section
+11. **Appendices** with appropriate numbering
 
 ## File Organization
 
@@ -166,12 +147,17 @@ your-thesis/
 ├── figures/
 │   ├── uporto-feup.png
 │   └── your-figures...
-└── prologue/
-    ├── abstract.typ
-    ├── resumo.typ
-    ├── acknowns.typ
-    ├── quote.typ
-    └── unsdg.typ
+├── prologue/
+│   ├── abstract.typ
+│   ├── resumo.typ
+│   ├── acknowns.typ
+│   └── unsdg.typ
+├── chapters/
+│   ├── 1-introduction.typ
+│   └── 2-your-chapters...
+└── appendixes/
+    ├── A-implementation-details.typ
+    └── B-your-appendices...   
 ```
 
 ## Chapter and Section Formatting

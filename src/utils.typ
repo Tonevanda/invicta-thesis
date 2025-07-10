@@ -1,21 +1,5 @@
 // Additional utility functions for FEUP thesis
 
-// Function to create a custom chapter without numbering (e.g., for appendices)
-#let custom-chapter(title, numbering: none) = {
-  pagebreak(weak: true)
-  v(2em)
-  if numbering != none {
-    block(
-      text(size: 20pt, weight: "bold", numbering)
-    )
-  }
-  v(1em)
-  block(
-    text(size: 26pt, weight: "bold", title)
-  )
-  v(2em)
-}
-
 // Function to create a dedication page
 #let dedication(content) = {
   set page(numbering: none)
@@ -97,7 +81,7 @@
     columns: (1fr, 3fr),
     stroke: none,
     fill: none,
-    ..acronyms.pairs().map(((acronym, definition)) => (acronym, definition)).flatten()
+    ..acronyms.flatten()
   )
   
   pagebreak()
