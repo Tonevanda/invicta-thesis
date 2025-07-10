@@ -1,11 +1,11 @@
 [package]
-name = "feup-thesis"
+name = "entheseering"
 version = "1.0.0"
 compiler = "0.13.1"
 entrypoint = "src/lib.typ"
 authors = ["João Lourenço <https://github.com/Tonevanda>"]
 license = "MIT"
-description = "A Master's thesis template for Faculty of Engineering of University of Porto"
+description = "Master's thesis for Faculty of Engineering of University of Porto"
 repository = "https://github.com/Tonevanda/feup-thesis"
 categories = ["thesis", "layout"]
 keywords = ["FEUP", "Universidade do Porto", "Faculdade de Engenharia", "tese", "thesis"]
