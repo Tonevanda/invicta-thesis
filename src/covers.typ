@@ -1,3 +1,5 @@
+// Cover page and committee page functions for FEUP thesis
+
 // Helper function for cover page
 #let make-cover(config) = {
   set page(numbering: none)
@@ -113,7 +115,7 @@
     
     v(1cm)
     
-    text(size: 14pt)[
+    text(size: 14pt, weight: "bold")[
       #config.author
     ]
     
@@ -156,32 +158,4 @@
     
     pagebreak()
   }
-}
-
-// Helper function for table of contents
-#let make-toc() = {
-  set page(numbering: "i")
-  counter(page).update(1)
-  
-  outline(
-    title: "Table of Contents",
-    depth: 3,
-    indent: auto,
-  )
-  
-  pagebreak()
-  
-  outline(
-    title: "List of Figures",
-    target: figure.where(kind: image),
-  )
-  
-  pagebreak()
-  
-  outline(
-    title: "List of Tables",
-    target: figure.where(kind: table)
-  )
-  
-  pagebreak()
 }

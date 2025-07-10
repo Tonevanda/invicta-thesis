@@ -1,1 +1,0 @@
-This section would contain information about how your thesis relates to the UN Sustainable Development Goals, if applicable.
