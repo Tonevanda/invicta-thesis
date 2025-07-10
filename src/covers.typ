@@ -27,8 +27,7 @@
 
   v(6cm)
   
-  
-  image("uporto-feup.png", width: 8cm)
+  image("../template/figures/uporto-feup.png", width: 8cm)
   v(1cm)
   
   if config.additional-front-text != none {

@@ -11,10 +11,10 @@ mkdir -p "$TARGET_DIR"
 
 # Copy the src folder, template folder, and typst.toml
 echo "Copying src/ folder..."
-cp -r src/ "$TARGET_DIR/"
+cp -r src "$TARGET_DIR/"
 
 echo "Copying template/ folder..."
-cp -r template/ "$TARGET_DIR/"
+cp -r template "$TARGET_DIR/"
 
 echo "Copying typst.toml..."
 cp typst.toml "$TARGET_DIR/"
