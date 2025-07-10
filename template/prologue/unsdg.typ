@@ -1,3 +1,5 @@
+#heading(level: 1, numbering: none)[United Nations Sustainable Development Goals]
+
 This research contributes to the following UN Sustainable Development Goals:
 
 - *Goal 9: Industry, Innovation and Infrastructure* - By developing more efficient computational methods that can accelerate scientific research and industrial applications.

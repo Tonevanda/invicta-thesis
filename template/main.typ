@@ -48,26 +48,19 @@
   text("To my family, whose unwavering support has been the foundation of my academic journey.", hyphenate: false),
 )
 
-// Resumo
 #set page(numbering: "i", number-align: bottom + center)
 #counter(page).update(1)
-#heading(level: 1, numbering: none)[Resumo]
 
+// Resumo
 #include "prologue/resumo.typ"
 
 // Abstract
-#heading(level: 1, numbering: none)[Abstract]
-
 #include "prologue/abstract.typ"
 
 // UN-SDG (example)
-#heading(level: 1, numbering: none)[United Nations Sustainable Development Goals]
-
 #include "prologue/unsdg.typ"
 
 // Acknowledgments
-#heading(level: 1, numbering: none)[Acknowledgments]
-
 #include "prologue/acknowns.typ"
 
 // Quote
@@ -103,7 +96,7 @@
 
 // CHAPTERS - Include your chapter files here
 // Follow the chapter-template.typ structure
-// 
+
 #include "chapters/1-introduction.typ"
 #include "chapters/2-literature-review.typ"
 #include "chapters/3-theoretical-foundations.typ"
@@ -116,10 +109,10 @@
 #bibliography("refs.bib", title: none, style: "ieee")
 #pagebreak()
 
-// Appendices
 #set heading(numbering: "A.1", level: 1)
 #counter(heading).update(0)
 
+// Appendices
 #include "appendixes/A-implementation-details.typ"
 #include "appendixes/B-additional-results.typ"
 
