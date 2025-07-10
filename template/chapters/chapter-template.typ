@@ -20,10 +20,10 @@ Regular content here.
 
 You can include figures:
 
-#figure(
-  image("../figures/your-image.png", width: 80%),
-  caption: [Your figure caption],
-) <fig:example>
+//#figure(
+//  image("../figures/your-image.png", width: 80%),
+//  caption: [Your figure caption],
+//) <fig:example>
 
 You can use code blocks:
 

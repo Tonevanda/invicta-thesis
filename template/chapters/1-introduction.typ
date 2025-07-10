@@ -1,5 +1,8 @@
-// Import template utilities
-#import "_utils.typ": *
+// Use this import when the package is published to Typst Universe
+// // #import "@preview/feup-thesis:1.0.0": *
+
+// Import template utilities directly
+#import "../../src/lib.typ" as feup
 
 #heading(level: 1)[Introduction]
 
