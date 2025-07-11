@@ -146,7 +146,7 @@ This template is released under the MIT License. See the LICENSE file for detail
 
 This template was created for the FEUP community and is not officially endorsed by the university. The FEUP logo and university branding remain property of the Faculdade de Engenharia da Universidade do Porto.
 
-This is based on Prof. João Canas and Prof. João Correia Lopes' Overleaf template.
+This is based on Prof. João Canas and Prof. João Correia Lopes' Overleaf template, which can be found [here](https://www.overleaf.com/latex/templates/feup-dissertation-format/qrsrxjjwzrzf).
 
 ---
 
