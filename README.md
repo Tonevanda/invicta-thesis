@@ -23,40 +23,6 @@ If you are using the Typst web app, no additional setup is required.
 
 For offline compilation, ensure you have Typst installed on your system.
 
-## Usage
-
-### Basic Usage
-```typst
-#import "@preview/feup-thesis:1.0.0": *
-
-#show: template.with(
-  title: "Your Thesis Title",
-  author: "Your Name",
-  supervisor: "Prof. Your Supervisor",
-)
-
-= Introduction
-Your content here...
-```
-
-### Advanced Configuration
-```typst
-#show: template.with(
-  title: "Advanced Machine Learning for Computer Vision",
-  author: "Maria Silva",
-  degree: "Master in Electrical and Computer Engineering",
-  supervisor: "Prof. João Santos",
-  committee-text: "Approved in oral examination by the committee:",
-  committee-members: (
-    (role: "President", name: "Prof. Ana Costa"),
-    (role: "Referee", name: "Prof. Carlos Lima"),
-  ),
-  stage: "final",
-  language: "en",
-  bib-style: "ieee",
-)
-```
-
 ## 🛠 Available Utilities
 
 - `#epigraph(quote, author)` - Quote with attribution
@@ -96,16 +62,16 @@ The template accepts the following parameters:
 - `has-quote`: Include quote page
 - `bib-style`: Bibliography style ("ieee", "apa", "chicago-notes", "mla")
 
-### Example Configuration
+### Example Usage
 
 ```typst
 #show: template.with(
   title: "Advanced Machine Learning Techniques for Computer Vision",
-  author: "João Silva",
+  author: "Luís Vaz de Camões",
   degree: "Master in Electrical and Computer Engineering",
   supervisor: "Prof. Maria Santos",
   second-supervisor: "Prof. Pedro Costa",
-  copyright-notice: "João Silva, 2025",
+  copyright-notice: "Luís Camões, 2025",
   committee-text: "Approved in oral examination by the committee:",
   committee-members: (
     (role: "President", name: "Prof. Ana Ferreira"),
@@ -163,7 +129,7 @@ your-thesis/
 
 The template provides automatic formatting for:
 
-- **Level 1 headings**: Chapters with "Chapter X" prefix
+- **Level 1 headings**: Chapters with "Chapter X" prefix and Appendices with "Appendix Y"
 - **Level 2+ headings**: Sections and subsections
 - **Figures and tables**: With automatic numbering and captions
 - **Bibliography**: Using your preferred citation style
@@ -179,6 +145,8 @@ This template is released under the MIT License. See the LICENSE file for detail
 ## Acknowledgments
 
 This template was created for the FEUP community and is not officially endorsed by the university. The FEUP logo and university branding remain property of the Faculdade de Engenharia da Universidade do Porto.
+
+This is based on Prof. João Canas and Prof. João Correia Lopes' Overleaf template.
 
 ---
 

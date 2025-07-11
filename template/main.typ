@@ -10,15 +10,15 @@
 
 #show: feup.template.with(
   // Document metadata
-  title: "Example FEUP Thesis",
-  author: "John Doe",
-  degree: "Master in Informatics and Computing Engineering",
-  supervisor: "Prof. Jane Smith",
-  second-supervisor: "Prof. Bob Johnson",
+  title: "<DISSERTATION TITLE>",
+  author: "<YOUR FULL NAME>",
+  degree: "<YOUR COURSE NAME>",
+  supervisor: "<SUPERVISOR NAME>",
+  second-supervisor: "<SECOND SUPERVISOR NAME>", // Optional, use none if not applicable
   
   // Dates and copyright
   thesis-date: none, // Will use current date
-  copyright-notice: "John Doe, 2025",
+  copyright-notice: "<YOUR NAME>, <YEAR OF PUBLICATION>",
   
   // Visual elements
   additional-front-text: none,
@@ -26,13 +26,11 @@
   // Committee information (example for final version), use none otherwise
   committee-text: "Approved in oral examination by the committee:",
   committee-members: (
-    (role: "President", name: "Prof. Maria Santos"),
-    (role: "Referee", name: "Prof. Carlos Silva"),
-    (role: "Referee", name: "Prof. Ana Costa"),
+    (role: "President", name: "<COMMITTEE PRESIDENT NAME>"),
+    (role: "Referee", name: "<COMMITTEE MEMBER NAME>"),
+    (role: "Referee", name: "<COMMITTEE MEMBER NAME>"),
   ),
   signature: false,
-  
-  dedication-text: "To my family, whose unwavering support has been the foundation of my academic journey.",
   
   // Configuration options
   stage: "final", // This is a final version
@@ -42,9 +40,9 @@
   bib-style: "ieee",
 )
 
-// Optional
+// Optional, remove this if you don't want a dedication
 #feup.dedication(
-  text("To my family, whose unwavering support has been the foundation of my academic journey.", hyphenate: false),
+  text("Dedication text, if you want to.", hyphenate: false),
 )
 
 #set page(numbering: "i", number-align: bottom + center)
