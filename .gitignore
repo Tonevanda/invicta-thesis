@@ -41,3 +41,5 @@ __pycache__/
 test.*
 !test.md
 !test.typ
+
+*.sh
