@@ -85,68 +85,8 @@
 )
 
 // Start main body with arabic numbering
-#set page(
-  numbering: none, // Disable automatic numbering since we handle it in header
-  number-align: top + right,
-  header: context {
-    let current-page = here().page()
-    let page-number = counter(page).at(here()).first()
-    
-    // Don't show header on chapter start pages
-    let all-headings = query(heading)
-    
-    for h in all-headings {
-      if h.level == 1 and h.location().page() == current-page {
-        return align(right)[#text(size: 11pt)[#page-number]]
-      }
-    }
-    
-    // Get current chapter and section
-    let chapter-headings = all-headings.filter(h => h.level == 1 and h.location().page() <= current-page)
-    let section-headings = all-headings.filter(h => h.level == 2 and h.location().page() <= current-page)
-    
-    let header-content = none
-    if chapter-headings.len() > 0 {
-      let current-chapter = chapter-headings.last()
-      let chapter-counter = counter(heading).at(current-chapter.location())
-      let chapter-num = chapter-counter.first()
-      
-      // Check if this is odd or even page
-      if calc.odd(current-page) {
-        // Odd pages: show current subsection (if any)
-        if section-headings.len() > 0 {
-          let current-section = section-headings.last()
-          let section-counter = counter(heading).at(current-section.location())
-          header-content = text(size: 10pt, style: "italic")[
-            #section-counter.first().#section-counter.at(1) #current-section.body
-          ]
-        } else {
-          // If no subsection, show chapter
-          header-content = text(size: 10pt, style: "italic")[
-            #chapter-num #current-chapter.body
-          ]
-        }
-      } else {
-        // Even pages: show current chapter
-        header-content = text(size: 10pt, style: "italic")[
-          #chapter-num #current-chapter.body
-        ]
-      }
-    }
-    
-    // Create header with content on left and page number on right
-    grid(
-      columns: (1fr, auto),
-      align: (left, right),
-      header-content,
-      text(size: 11pt)[#page-number]
-    )
-  }
-)
-#counter(page).update(1)
-
-// Mark the start of main content for table of contents
 <main-content>
+#show: feup.main-content-wrapper
 
 // CHAPTERS - Include your chapter files here
 // Follow the chapter-template.typ structure
