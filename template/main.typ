@@ -85,11 +85,11 @@
 )
 
 // Start main body with arabic numbering
+<main-content>
 #show: feup.main-content-wrapper
 
 // CHAPTERS - Include your chapter files here
 // Follow the chapter-template.typ structure
-<main-content>
 
 #include "chapters/1-introduction.typ"
 #include "chapters/2-literature-review.typ"

@@ -75,7 +75,10 @@
 
 // Function for creating a list of acronyms
 #let acronym-list(acronyms) = {
-  heading(level: 1, numbering: none)[List of Acronyms]
+  // Use text instead of heading to avoid showing in table of contents
+  v(4em)
+  text(size: 26pt, weight: "bold")[List of Acronyms]
+  v(1em)
   
   table(
     columns: (1fr, 3fr),
