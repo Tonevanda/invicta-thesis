@@ -6,7 +6,7 @@
 // // #import "@preview/feup-thesis:1.0.0": *
 
 // For local development, use:
-#import "@local/feup-thesis:1.0.0" as feup
+#import "@preview/feup-thesis:1.0.0" as feup
 
 #show: feup.template.with(
   // Document metadata

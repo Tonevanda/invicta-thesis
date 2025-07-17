@@ -1,4 +1,4 @@
-#import "@local/feup-thesis:1.0.0" as feup
+#import "@preview/feup-thesis:1.0.0" as feup
 
 #heading[Implementation Details]
 
