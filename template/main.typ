@@ -1,11 +1,3 @@
-// Example file for local development and testing
-// This file demonstrates the template with a complete thesis example
-// To use: copy this as your starting point and modify as needed
-
-// Use this import when the package is published to Typst Universe
-// // #import "@preview/feup-thesis:1.0.0": *
-
-// For local development, use:
 #import "@preview/feup-thesis:1.0.0" as feup
 
 #show: feup.template.with(
