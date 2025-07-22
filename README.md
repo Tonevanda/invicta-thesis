@@ -35,4 +35,4 @@ This is based on Prof. João Canas and Prof. João Correia Lopes' Overleaf templ
 
 ---
 
-**Note**: This is an unofficial template. Always verify that your thesis meets current FEUP requirements before submission.
+**Note**: This is an unofficial template. Always verify that your thesis meets current FEUP requirements before submission. The FEUP logo and UP logo used in this template are under copyright of Universidade do Porto, and shall not be used for non-professional purposes or by people outside of the institution without its express authorization.
