@@ -1,4 +1,4 @@
-// Table of contents functions for FEUP thesis
+// Table of contents functions for INVICTA thesis
 
 // Helper function for table of contents
 #let make-toc() = {

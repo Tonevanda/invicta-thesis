@@ -1,4 +1,4 @@
-// Cover page and committee page functions for FEUP thesis
+// Cover page and committee page functions for Invicta thesis
 
 // Helper function for cover page
 #let make-cover(config) = {

@@ -1,7 +1,7 @@
 // Use this import when the package is published to Typst Universe
-// // #import "@preview/feup-thesis:1.0.0": *
+// // #import "@preview/invicta-thesis:1.0.0": *
 
-#import "@preview/feup-thesis:1.0.0" as feup
+#import "@preview/invicta-thesis:1.0.0" as feup
 
 #heading(level: 1)[Theoretical Foundations]
 

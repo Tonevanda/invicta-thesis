@@ -1,15 +1,15 @@
-// FEUP THESIS TEMPLATE for Typst
+// INVICTA THESIS TEMPLATE for Typst
 // Main package exports
 // João Lourenço, July 2025 (Typst version)
 
 // Import all template modules
-#import "template.typ": feup-thesis, main-content
+#import "template.typ": invicta-thesis, main-content
 #import "covers.typ": make-cover, make-committee-page
 #import "toc.typ": make-toc
 #import "utils.typ": *
 
 // Export the main template function
-#let template = feup-thesis
+#let template = invicta-thesis
 
 // Export utility functions
 #let cover = make-cover

@@ -2,10 +2,10 @@
 // Copy this template to create new chapters
 
 // Import chapter utilities (adjust path as needed)
-//#import "@preview/feup-thesis:1.0.0" as feup
+//#import "@preview/invicta-thesis:1.0.0" as feup
 
 // For local development, use:
-#import "@preview/feup-thesis:1.0.0" as feup
+#import "@preview/invicta-thesis:1.0.0" as feup
 
 // Example chapter content
 #heading(level: 1)[Your Chapter Title]

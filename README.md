@@ -1,4 +1,4 @@
-# FEUP Thesis Template
+# Invicta Thesis Template
 
 An unofficial Master's thesis template for the Faculty of Engineering of the University of Porto (FEUP) written in Typst.
 

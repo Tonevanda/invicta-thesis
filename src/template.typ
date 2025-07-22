@@ -1,11 +1,11 @@
-// FEUP THESIS TEMPLATE
+// INVICTA THESIS TEMPLATE
 // Main template function and document setup
 
 #import "covers.typ": make-cover, make-committee-page
 #import "toc.typ": make-toc
 
 // Main template function
-#let feup-thesis(
+#let invicta-thesis(
   // Document metadata
   title: "<DISSERTATION-TITLE>",
   author: "<FULL-NAME>",
