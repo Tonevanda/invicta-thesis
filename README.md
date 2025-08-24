@@ -24,6 +24,7 @@ This template provides a clean and professional layout that follows FEUP's thesi
   language: "en",
   has-quote: true,
   bib-style: "ieee",
+  on-paper: true,
 )
 ```
 
