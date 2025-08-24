@@ -7,14 +7,14 @@
   degree: "<YOUR COURSE NAME>",
   supervisor: "<SUPERVISOR NAME>",
   second-supervisor: "<SECOND SUPERVISOR NAME>", // Optional, use none if not applicable
-  
+
   // Dates and copyright
   thesis-date: none, // Will use current date
   copyright-notice: "<YOUR NAME>, <YEAR OF PUBLICATION>",
-  
+
   // Visual elements
   additional-front-text: none,
-  
+
   // Committee information (example for final version), use none otherwise
   committee-text: "Approved in oral examination by the committee:",
   committee-members: (
@@ -23,13 +23,14 @@
     (role: "Referee", name: "<COMMITTEE MEMBER NAME>"),
   ),
   signature: false,
-  
+
   // Configuration options
   stage: "final", // This is a final version
   language: "en",
   has-unsdg: false, // Include UN SDG section
   has-quote: true,
   bib-style: "ieee",
+  on-paper: false, // Links will be shown
 )
 
 // Optional, remove this if you don't want a dedication
@@ -55,7 +56,7 @@
 // Quote
 #feup.epigraph(
   "The best way to predict the future is to invent it.",
-  "Alan Kay"
+  "Alan Kay",
 )
 
 // Table of Contents
@@ -63,18 +64,17 @@
 
 // List of Acronyms
 #feup.acronym-list((
-    ("AI", "Artificial Intelligence"),
-    ("API", "Application Programming Interface"),
-    ("CNN", "Convolutional Neural Network"),
-    ("CPU", "Central Processing Unit"),
-    ("GPU", "Graphics Processing Unit"),
-    ("ML", "Machine Learning"),
-    ("NLP", "Natural Language Processing"),
-    ("RNN", "Recurrent Neural Network"),
-    ("SGD", "Stochastic Gradient Descent"),
-    ("UI", "User Interface"),
-  ),
-)
+  ("AI", "Artificial Intelligence"),
+  ("API", "Application Programming Interface"),
+  ("CNN", "Convolutional Neural Network"),
+  ("CPU", "Central Processing Unit"),
+  ("GPU", "Graphics Processing Unit"),
+  ("ML", "Machine Learning"),
+  ("NLP", "Natural Language Processing"),
+  ("RNN", "Recurrent Neural Network"),
+  ("SGD", "Stochastic Gradient Descent"),
+  ("UI", "User Interface"),
+))
 
 // Start main body with arabic numbering
 <main-content>
