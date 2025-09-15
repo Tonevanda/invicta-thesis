@@ -2,9 +2,17 @@
 
 // Helper function for cover page
 #let make-cover(config) = {
-  set page(numbering: none)
-  set align(center)
+  set page(
+    numbering: none,
+    background: if config.stage == "jury" {
+      rotate(-45deg, text(70pt, fill: rgb("CCCCCC"))[
+        For Jury Evaluation
+      ])
+    } else { none },
+  )
 
+
+  set align(center)
 
   v(0.5em)
   text(size: 12.5pt, weight: "bold")[
@@ -25,9 +33,9 @@
     #config.author
   ]
 
-  v(6cm)
+  v(7cm)
 
-  image("../template/figures/uporto-feup.png", width: 8cm)
+  image("uporto-feup.png", width: 8cm)
   v(1cm)
 
   if config.additional-front-text != none {
@@ -69,6 +77,8 @@
   text(size: 12pt)[
     #date-text
   ]
+
+  set page(background: none)
 
   pagebreak()
 
