@@ -8,7 +8,7 @@
 
 This chapter provides a comprehensive review of existing literature in machine learning optimization, neural network architectures, and related computational techniques.
 
-This is referenced in @khakipoor_linear_2023.
+This is referenced in @khakipoor_linear_2023 @liu_energy_2023.
 
 == Machine Learning Foundations
 

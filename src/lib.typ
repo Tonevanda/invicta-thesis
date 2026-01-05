@@ -18,3 +18,10 @@
 
 // Export main content wrapper
 #let main-content-wrapper = main-content
+
+// Export bibliography function
+#let make-bibliography(style) = {
+  heading(level: 1, numbering: none)[Bibliography]
+  bibliography("../template/refs.bib", style: style, title: "References")
+  pagebreak()
+}

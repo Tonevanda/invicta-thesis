@@ -89,9 +89,9 @@
 #include "chapters/6-conclusions-and-future-work.typ"
 
 // Bibliography
-#heading(level: 1, numbering: none)[Bibliography]
-#bibliography("refs.bib", title: none, style: "ieee")
-#pagebreak()
+// Use the appropriate style
+// Options: "ieee", "apa", "elsevier-vancouver", etc.
+#feup.make-bibliography("elsevier-vancouver")
 
 #set heading(numbering: "A.1", level: 1)
 #counter(heading).update(0)
