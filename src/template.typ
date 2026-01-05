@@ -177,7 +177,7 @@
         let chapter-num = chapter-counter.first()
 
         // Check if this is odd or even page
-        if calc.odd(current-page) {
+        if calc.odd(page-number) {
           // Odd pages: show current subsection (if any)
           if section-headings.len() > 0 {
             let current-section = section-headings.last()
