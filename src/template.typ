@@ -63,8 +63,8 @@
     margin: (
       top: 2.5cm,
       bottom: 2.5cm,
-      left: 3cm,
-      right: 2.5cm,
+      left: 4.5cm,
+      right: 3.5cm,
     ),
     numbering: "1",
     number-align: top + right,
@@ -72,8 +72,9 @@
 
   // Text formatting
   set text(
-    size: 11pt,
+    size: 12pt,
     lang: language,
+    font: "Times"
   )
 
   // Paragraph formatting
@@ -83,34 +84,53 @@
     spacing: 1.2em,
   )
 
-  // Heading formatting
-  show heading.where(level: 1): it => [
-    #pagebreak(weak: true)
-    #v(2em)
-    #if it.numbering != none {
-      let chapter_num = counter(heading).get().first()
-
-      // Check if this is an appendix by looking at the numbering pattern
-      if it.numbering == "A.1" {
-        // Convert number to letter (1=A, 2=B, etc.)
-        let appendix_letter = str.from-unicode(65 + chapter_num - 1) // 65 is ASCII for 'A'
-        block(
-          text(size: 20pt, weight: "bold", [Appendix #appendix_letter]),
-        )
-      } else {
-        block(
-          text(size: 20pt, weight: "bold", [Chapter #chapter_num]),
-        )
-      }
-    }
-    #v(1em)
-    #block(
-      text(size: 26pt, weight: "bold", it.body),
-    )
-    #v(2em)
-  ]
-
   set heading(numbering: "1.1")
+
+  // Heading formatting
+  show heading: it => [
+
+    #let heading_size = if it.level == 1 {
+      22pt
+    } else if it.level == 2 {
+      18pt
+    } else if it.level == 3 {
+      15pt
+    } else {
+      14pt
+    }
+
+    #if it.level > 1 {
+      v(1em)
+      block(
+        text(counter(heading).display() + h(0.4cm) + it.body, size: heading_size)
+      )
+      v(1em)
+    } else {
+      pagebreak(weak: true)
+      v(6.3em)
+      if it.numbering != none {
+        let chapter_num = counter(heading).get().first()
+
+        // Check if this is an appendix by looking at the numbering pattern
+        if it.numbering == "A.1" {
+          // Convert number to letter (1=A, 2=B, etc.)
+          let appendix_letter = str.from-unicode(65 + chapter_num - 1) // 65 is ASCII for 'A'
+          block(
+            text(size: 24pt, weight: "bold", [Appendix #appendix_letter]),
+          )
+        } else {
+          block(
+            text(size: 24pt, weight: "bold", [Chapter #chapter_num]),
+          )
+        }
+      }
+      v(1em)
+      block(
+        text(size: 28pt, weight: "bold", it.body),
+      )
+      v(2em)}
+    
+  ]
 
   // Figure and table formatting
   set figure(
