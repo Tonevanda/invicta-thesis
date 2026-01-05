@@ -3,6 +3,7 @@
 
 #import "covers.typ": make-committee-page, make-cover
 #import "toc.typ": make-toc
+#import "utils.typ": set-config
 
 // Main template function
 #let invicta-thesis(
@@ -23,7 +24,7 @@
   signature: false, // true if handwritten signature
   dedication-text: none, // Optional dedication
   // Configuration options
-  stage: "preparation", // "preparation", "juri", "final"
+  stage: none, // none, "jury", "final"
   language: "en", // "en", "pt"
   bib-style: "ieee", // bibliography style: e.g, "apa", "chicago-notes", "mla"
   on-paper: false, // if true, links are not shown (for paper versions)
@@ -134,80 +135,16 @@
   // Preliminary materials
   make-committee-page(config)
 
-  // Apply styling to body content
+  // Store config temporarily for main-content access
+  set-config(config)
+
   body
 }
 
 // Function to set up main content with headers and page numbering
-#let setup-main-content() = [
-  #set page(
-    numbering: none, // Disable automatic numbering since we handle it in header
-    number-align: top + right,
-    header: context {
-      let current-page = here().page()
-      let page-number = counter(page).at(here()).first()
+#let main-content(config, body) = {
+  set par.line(numbering: if config.stage == "jury" { "1" })
 
-      // Don't show header on chapter start pages
-      let all-headings = query(heading)
-
-      for h in all-headings {
-        if h.level == 1 and h.location().page() == current-page {
-          return align(right)[#text(size: 11pt)[#page-number]]
-        }
-      }
-
-      // Get current chapter and section
-      let chapter-headings = all-headings.filter(h => (
-        h.level == 1 and h.location().page() <= current-page
-      ))
-      let section-headings = all-headings.filter(h => (
-        h.level == 2 and h.location().page() <= current-page
-      ))
-
-      let header-content = none
-      if chapter-headings.len() > 0 {
-        let current-chapter = chapter-headings.last()
-        let chapter-counter = counter(heading).at(current-chapter.location())
-        let chapter-num = chapter-counter.first()
-
-        // Check if this is odd or even page
-        if calc.odd(current-page) {
-          // Odd pages: show current subsection (if any)
-          if section-headings.len() > 0 {
-            let current-section = section-headings.last()
-            let section-counter = counter(heading).at(
-              current-section.location(),
-            )
-            header-content = text(size: 10pt, style: "italic")[
-              #section-counter.first().#section-counter.at(1) #current-section.body
-            ]
-          } else {
-            // If no subsection, show chapter
-            header-content = text(size: 10pt, style: "italic")[
-              #chapter-num #current-chapter.body
-            ]
-          }
-        } else {
-          // Even pages: show current chapter
-          header-content = text(size: 10pt, style: "italic")[
-            #chapter-num #current-chapter.body
-          ]
-        }
-      }
-
-      // Create header with content on left and page number on right
-      grid(
-        columns: (1fr, auto),
-        align: (left, right),
-        header-content, text(size: 11pt)[#page-number],
-      )
-    },
-  )
-  #counter(page).update(1)
-]
-
-// Main content show rule - this is what we want to extract
-#let main-content(body) = {
   set page(
     numbering: none, // Disable automatic numbering since we handle it in header
     number-align: top + right,
