@@ -144,7 +144,7 @@
 
 // Function to set up main content with headers and page numbering
 #let main-content(config, body) = {
-  set par.line(numbering: if config.stage == "jury" { "1" })
+  set par.line(numbering: n => if config.stage == "jury" and calc.rem(n, 2) == 0 { n })
 
   set page(
     numbering: none, // Disable automatic numbering since we handle it in header
