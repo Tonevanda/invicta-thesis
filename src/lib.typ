@@ -16,5 +16,10 @@
 #let committee-page = make-committee-page
 #let table-of-contents = make-toc
 
-// Export main content wrapper
-#let main-content-wrapper = main-content
+// Export main content wrapper that retrieves config from state
+#let main-content-wrapper = (body) => {
+  context {
+    let config = get-config()
+    main-content(config, body)
+  }
+}

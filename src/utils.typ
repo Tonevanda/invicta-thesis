@@ -103,3 +103,14 @@
   
   pagebreak()
 }
+
+// Global config state for use in show rules
+#let config-state = state("thesis-config", (:))
+
+#let set-config(config) = {
+  config-state.update(config)
+}
+
+#let get-config() = {
+  config-state.get()
+}
