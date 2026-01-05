@@ -50,6 +50,7 @@
     has-unsdg: has-unsdg,
     has-quote: has-quote,
     bib-style: bib-style,
+    on-paper: on-paper,
   )
 
   // Document setup
