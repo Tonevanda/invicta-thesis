@@ -16,15 +16,13 @@
 #let committee-page = make-committee-page
 #let table-of-contents = make-toc
 
-// Export main content wrapper
-#let main-content-wrapper = main-content
-
 // Export bibliography function
 #let make-bibliography(style) = {
   heading(level: 1, numbering: none)[Bibliography]
   bibliography("../template/refs.bib", style: style, title: "References")
   pagebreak()
 }
+
 // Export main content wrapper that retrieves config from state
 #let main-content-wrapper = (body) => {
   context {
