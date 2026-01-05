@@ -27,8 +27,6 @@
   // Configuration options
   stage: "final", // This is a final version
   language: "en",
-  has-unsdg: false, // Include UN SDG section
-  has-quote: true,
   bib-style: "ieee",
   on-paper: false, // Links will be shown
 )

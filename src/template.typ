@@ -25,8 +25,6 @@
   // Configuration options
   stage: "preparation", // "preparation", "juri", "final"
   language: "en", // "en", "pt"
-  has-unsdg: false, // true if your thesis has united nations sustainable development goals
-  has-quote: true, // true if your thesis has a quote
   bib-style: "ieee", // bibliography style: e.g, "apa", "chicago-notes", "mla"
   on-paper: false, // if true, links are not shown (for paper versions)
   // Document body
@@ -47,8 +45,6 @@
     signature: signature,
     stage: stage,
     language: language,
-    has-unsdg: has-unsdg,
-    has-quote: has-quote,
     bib-style: bib-style,
   )
 
