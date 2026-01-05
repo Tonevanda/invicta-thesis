@@ -46,6 +46,7 @@
     stage: stage,
     language: language,
     bib-style: bib-style,
+    on-paper: on-paper,
   )
 
   // Document setup
