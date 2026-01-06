@@ -26,7 +26,6 @@
   // Configuration options
   stage: none, // none, "jury", "final"
   language: "en", // "en", "pt"
-  bib-style: "ieee", // bibliography style: e.g, "apa", "chicago-notes", "mla"
   on-paper: false, // if true, links are not shown (for paper versions)
   // Document body
   body,
@@ -46,7 +45,6 @@
     signature: signature,
     stage: stage,
     language: language,
-    bib-style: bib-style,
     on-paper: on-paper,
   )
 
