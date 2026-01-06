@@ -67,7 +67,6 @@
   )
   
   bibliography("../template/refs.bib", style: style, title: "References")
-  pagebreak()
 }
 
 // Export main content wrapper that retrieves config from state
