@@ -203,28 +203,32 @@
             let section-counter = counter(heading).at(
               current-section.location(),
             )
-            header-content = text(size: 10pt, style: "italic")[
+            header-content = text(size: 12pt, style: "italic")[
               #section-counter.first().#section-counter.at(1) #current-section.body
             ]
           } else {
             // If no subsection, show chapter
-            header-content = text(size: 10pt, style: "italic")[
+            header-content = text(size: 12pt, style: "italic")[
               #chapter-num #current-chapter.body
             ]
           }
         } else {
           // Even pages: show current chapter
-          header-content = text(size: 10pt, style: "italic")[
+          header-content = text(size: 12pt, style: "italic")[
             #chapter-num #current-chapter.body
           ]
         }
       }
 
       // Create header with content on left and page number on right
-      grid(
-        columns: (1fr, auto),
-        align: (left, right),
-        header-content, text(size: 11pt)[#page-number],
+      pad(
+        left: -1cm,
+        right: -0.5cm,
+        grid(
+          columns: (1fr, auto),
+          align: (left, right),
+          header-content, text(size: 11pt)[#page-number],
+        )
       )
     },
     footer: context {

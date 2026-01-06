@@ -36,11 +36,15 @@
       }
       
       // Create header with "REFERENCES" on left and page number on right
-      grid(
-        columns: (1fr, auto),
-        align: (left, right),
-        text(size: 12pt, style: "italic")[REFERENCES],
-        text(size: 12pt)[#page-number],
+      pad(
+        left: -1cm,
+        right: -0.5cm,
+        grid(
+          columns: (1fr, auto),
+          align: (left, right),
+          text(size: 12pt, style: "italic")[REFERENCES],
+          text(size: 12pt)[#page-number],
+        )
       )
     },
     footer: context {
