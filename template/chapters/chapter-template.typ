@@ -1,10 +1,6 @@
 // Chapter template for FEUP thesis
 // Copy this template to create new chapters
 
-// Import chapter utilities (adjust path as needed)
-//#import "@preview/invicta-thesis:1.0.0" as feup
-
-// For local development, use:
 #import "@preview/invicta-thesis:1.0.0" as feup
 
 // Example chapter content

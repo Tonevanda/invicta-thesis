@@ -1,7 +1,3 @@
-// Use this import when the package is published to Typst Universe
-// // #import "@preview/invicta-thesis:1.0.0": *
-
-// Import template utilities directly
 #import "@preview/invicta-thesis:1.0.0" as feup
 
 #heading(level: 1)[Introduction]
