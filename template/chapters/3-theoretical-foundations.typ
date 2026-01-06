@@ -1,4 +1,4 @@
-#import "@preview/invicta-thesis:1.0.0" as feup
+#import "@preview/invicta-thesis:1.1.0" as feup
 
 #heading(level: 1)[Theoretical Foundations]
 
