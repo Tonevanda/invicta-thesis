@@ -209,13 +209,13 @@
           } else {
             // If no subsection, show chapter
             header-content = text(size: 12pt, style: "italic")[
-              #chapter-num #current-chapter.body
+              #current-chapter.body
             ]
           }
         } else {
           // Even pages: show current chapter
           header-content = text(size: 12pt, style: "italic")[
-            #chapter-num #current-chapter.body
+            #current-chapter.body
           ]
         }
       }
@@ -223,7 +223,7 @@
       // Create header with content on left and page number on right
       pad(
         left: -1cm,
-        right: -0.5cm,
+        right: -0.7cm,
         grid(
           columns: (1fr, auto),
           align: (left, right),

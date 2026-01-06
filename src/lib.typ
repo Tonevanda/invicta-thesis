@@ -38,7 +38,7 @@
       // Create header with "REFERENCES" on left and page number on right
       pad(
         left: -1cm,
-        right: -0.5cm,
+        right: -0.7cm,
         grid(
           columns: (1fr, auto),
           align: (left, right),
