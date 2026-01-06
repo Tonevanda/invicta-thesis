@@ -176,9 +176,10 @@
       // Don't show header on chapter start pages
       let all-headings = query(heading)
 
+      // Check if current page is a chapter start and skip header if so
       for h in all-headings {
         if h.level == 1 and h.location().page() == current-page {
-          return align(right)[#text(size: 11pt)[#page-number]]
+          return none
         }
       }
 
@@ -227,6 +228,21 @@
         align: (left, right),
         header-content, text(size: 11pt)[#page-number],
       )
+    },
+    footer: context {
+      let current-page = here().page()
+      let page-number = counter(page).at(here()).first()
+
+      // Show footer page number only on chapter start pages
+      let all-headings = query(heading)
+
+      for h in all-headings {
+        if h.level == 1 and h.location().page() == current-page {
+          return align(center)[#text(size: 11pt)[#page-number]]
+        }
+      }
+
+      return none // No footer on regular pages
     },
   )
   counter(page).update(1)
