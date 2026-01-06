@@ -72,7 +72,7 @@
   set text(
     size: 12pt,
     lang: language,
-    font: "Libertinus Serif",
+    font: "Nimbus Roman",
   )
 
   // Paragraph formatting
